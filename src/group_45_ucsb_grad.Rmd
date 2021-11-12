@@ -1,0 +1,20 @@
+---
+title: "Group 45 UCSB domestic grad enrollment"
+author: "Charlie Wilson"
+date: "11/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#attach relevant packages
+library(tidyverse)
+library(here)
+```
+
+```{r}
+#read in UCSB Graduate data
+ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
+```
+
