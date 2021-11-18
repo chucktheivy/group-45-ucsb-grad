@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 #attach relevant packages
 library(tidyverse)
@@ -19,12 +19,13 @@ ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
 ```
 
 ```{r}
+#create geom_col of ucsb grad data
 ggplot(data = ucsb_grad, aes(y = domestic_enrollment, x = year_abbr, fill = ethnicity)) +
-  geom_col(position = "fill") +
+  geom_col(position = "fill") + #change from absolute counts to proportions 
   labs(x = "UCSB grad student class graduation year",
        y = "Percent of UCSB class (%)", 
        title = "Ethnic representation (%) of UCSB graduate students by graduation year") +
-       theme_minimal() 
+       theme_minimal() #change theme
 ```
 
 
