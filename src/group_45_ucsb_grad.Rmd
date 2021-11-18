@@ -22,6 +22,11 @@ ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
 ggplot(data = ucsb_grad, aes(y = domestic_enrollment, x = year_abbr, fill = ethnicity)) +
   geom_col(position = "fill") +
   labs(x = "UCSB grad student class graduation year",
-       y = "Percent of UCSB class (%)")
+       y = "Percent of UCSB class (%)", 
+       title = "Ethnic representation (%) of UCSB graduate students by graduation year") +
+       theme_minimal() 
 ```
 
+
+
+**Figure** 1: Ethnic representation of UCSB graduate students as a percentage of the total population of UCSB graduate students. Ethnicity percentages are broken down per graduating class from 2008 - 2019. Pink = "White", light purple = "Unknown", purple = "Other", blue = "Latino", Green/blue = "Filipino, light green = "E. Indian/Pakistan, green = "Chicano", olive green = "Black/African American, orange = "Asian/ Pacific Islander, red = "American Indian/ Alaskan". 
